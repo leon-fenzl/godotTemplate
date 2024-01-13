@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dogxasadug2b2"]
+
+[ext_resource type="Script" path="res://2D Platformer/2DPlayerPlatformer.gd" id="1_mla12"]
+[ext_resource type="Script" path="res://2D Platformer/CameraFollow.gd" id="2_v4wre"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ho7b5"]
+
+[node name="2DPlayer_Platformer" type="CharacterBody2D"]
+script = ExtResource("1_mla12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ho7b5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_v4wre")
+lerpSpeed = 10.0

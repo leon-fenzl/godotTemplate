@@ -1,0 +1,29 @@
+extends Camera3D
+
+@export var displace_Height:float
+@export var mouseSpeed:float
+@export var controllerSpeed:float
+@export var minLength:float
+@export var maxLength:float
+@export var pitch := Vector2(-80.0,80.0)
+@export var yaw := Vector2(0.0,360.0)
+@onready var camInputs := Vector2.ZERO
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		rotation.x -= event.relative.y*mouseSpeed*get_physics_process_delta_time()
+		rotation.x = clamp(rotation.x,deg_to_rad(pitch.x),deg_to_rad(pitch.y))
+		rotation.y -= event.relative.x*mouseSpeed*get_physics_process_delta_time()
+		rotation.y = wrapf(rotation.y,deg_to_rad(yaw.x),deg_to_rad(yaw.y))
+func _physics_process(delta: float) -> void:
+	Controller_Inputs()
+	if (camInputs.length()!= 0.2):
+		Ctrlr_Pitch_Yaw(delta)
+func Controller_Inputs():
+	camInputs = Input.get_vector("camLeft","camRight","camUp","camDown").normalized()
+	camInputs = camInputs.normalized()
+func Ctrlr_Pitch_Yaw(DELTA:float):
+	rotation.x -= camInputs.y*controllerSpeed*DELTA
+	rotation.x = clamp(rotation.x,deg_to_rad(pitch.x),deg_to_rad(pitch.y))
+	rotation.y -= camInputs.x*controllerSpeed*DELTA
+	rotation.y = wrapf(rotation.y,deg_to_rad(yaw.x),deg_to_rad(yaw.y))
