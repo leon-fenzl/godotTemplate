@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnhk1h2b6os1r"]
 
-[ext_resource type="Script" path="res://FPS/FPSCharController.gd" id="1_im2q3"]
-[ext_resource type="Script" path="res://FPS/FPSCameraController.gd" id="2_w1wv7"]
+[ext_resource type="Script" path="res://FPS/Scripts/FPSCharController.gd" id="1_im2q3"]
+[ext_resource type="Script" path="res://FPS/Scripts/FPSCameraController.gd" id="2_w1wv7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ldgew"]
 

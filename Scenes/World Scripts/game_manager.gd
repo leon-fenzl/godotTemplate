@@ -1,7 +1,7 @@
 extends Node
 
-@export var pauseUIRef : NodePath
-@onready var pauseUI = get_node(pauseUIRef)
+#@export var pauseUIRef : NodePath
+#@onready var pauseUI = get_node(pauseUIRef)
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

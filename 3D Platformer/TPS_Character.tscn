@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bpx3donlkdl43"]
 
-[ext_resource type="Script" path="res://3D Platformer/TPSCharController.gd" id="1_4k6kh"]
-[ext_resource type="Script" path="res://3D Platformer/TPSCameraController.gd" id="2_7kgh4"]
+[ext_resource type="Script" path="res://3D Platformer/Scripts/TPSCharController.gd" id="1_4k6kh"]
+[ext_resource type="Script" path="res://3D Platformer/Scripts/TPSCameraController.gd" id="2_7kgh4"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_ldgew"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v1gif"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nqb84"]
 
@@ -12,8 +12,8 @@ script = ExtResource("1_4k6kh")
 cameraRef = NodePath("SpringArm3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-mesh = SubResource("BoxMesh_ldgew")
+transform = Transform3D(0.999993, 0.00310665, -0.00193027, -0.00310338, 0.999994, 0.00169927, 0.00193553, -0.00169329, 0.999997, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_v1gif")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_nqb84")
@@ -23,7 +23,6 @@ collision_mask = 30
 spring_length = 10.0
 script = ExtResource("2_7kgh4")
 displace_Height = 1.0
-controllerSpeed = 20.0
 lerpSpeed = 10.0
 minLength = 5.0
 maxLength = 20.0

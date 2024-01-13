@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @export var speed = 300.0
 @export var jumpForce = 400.0
+@export var mouseSpeed:float
+@export var controllerSpeed:float
 @export var cameraRef : NodePath
 @onready var camera = get_node(cameraRef)
 @onready var gravityVector = ProjectSettings.get_setting("physics/3d/default_gravity_vector")
@@ -35,9 +37,16 @@ func Walk(DELTA:float):
 	direction.z = lerp(direction.z,direction.z*speed*DELTA,10*DELTA)
 func Jump(DELTA:float):
 	if Input.is_action_just_pressed("jump") && is_on_floor():
-		fallDirection += jumpForce*DELTA
+		fallDirection += transform.basis.y * jumpForce*DELTA
 		await get_tree().create_timer(0.25).timeout
 		if Input.is_action_pressed("jump") && !is_on_floor():
-			fallDirection += gravityVector * 20 * DELTA
+			fallDirection += gravityVector * 10 * DELTA
 	if Input.is_action_just_released("jump") && !is_on_floor():
-		fallDirection += gravityVector * 20 * DELTA
+		fallDirection += gravityVector * 10 * DELTA
+	#if Input.is_action_just_pressed("jump") && is_on_floor():
+		#fallDirection += -transform.y * jumpForce * DELTA
+		#await get_tree().create_timer(0.25).timeout
+		#if Input.is_action_pressed("jump") && !is_on_floor():
+			#fallDirection += gravityVector*1000*DELTA
+	#if Input.is_action_just_released("jump") && !is_on_floor():
+		#fallDirection += gravityVector*1000*DELTA

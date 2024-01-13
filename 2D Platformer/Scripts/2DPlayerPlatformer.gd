@@ -10,22 +10,19 @@ func _physics_process(delta):
 	GravitySystem(delta)
 	Walk()
 	Jump(delta)
-	velocity.x = walk.x*speed*delta
+	velocity.x = lerpf(velocity.x,walk.x*speed*delta,10*delta)
 	velocity += fallDirection
 	move_and_slide()
 func GravitySystem(DELTA:float):
-	if !is_on_floor():
-		fallDirection += gravityVector * DELTA
+	if !is_on_floor(): fallDirection += gravityVector*DELTA
 	else: fallDirection = -get_floor_normal()
 func Walk():
-	walk.x = Input.get_action_strength("left") - Input.get_action_strength("right")
-	walk.y = Input.get_action_strength("up") - Input.get_action_strength("down")
-	walk = walk.normalized()
+	walk = Input.get_vector("left","right","forward","back").normalized()
 func Jump(DELTA:float):
 	if Input.is_action_just_pressed("jump") && is_on_floor():
-		fallDirection += jumpForce*DELTA
+		fallDirection += -transform.y * jumpForce * DELTA
 		await get_tree().create_timer(0.25).timeout
 		if Input.is_action_pressed("jump") && !is_on_floor():
-			fallDirection += gravityVector * 20 * DELTA
+			fallDirection += gravityVector*10*DELTA
 	if Input.is_action_just_released("jump") && !is_on_floor():
-		fallDirection += gravityVector * 20 * DELTA
+		fallDirection += gravityVector*10*DELTA

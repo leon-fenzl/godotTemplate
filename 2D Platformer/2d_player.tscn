@@ -1,16 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://dogxasadug2b2"]
 
-[ext_resource type="Script" path="res://2D Platformer/2DPlayerPlatformer.gd" id="1_mla12"]
-[ext_resource type="Script" path="res://2D Platformer/CameraFollow.gd" id="2_v4wre"]
+[ext_resource type="Script" path="res://2D Platformer/Scripts/2DPlayerPlatformer.gd" id="1_mla12"]
+[ext_resource type="Script" path="res://2D Platformer/Scripts/CameraFollow.gd" id="2_v4wre"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ho7b5"]
 
 [node name="2DPlayer_Platformer" type="CharacterBody2D"]
 script = ExtResource("1_mla12")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("2_v4wre")
+lerpSpeed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ho7b5")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("2_v4wre")
-lerpSpeed = 10.0
