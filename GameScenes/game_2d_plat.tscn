@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bns40crfgy1v1"]
 
 [ext_resource type="PackedScene" uid="uid://dogxasadug2b2" path="res://2D Platformer/2d_player.tscn" id="1_3jlgt"]
-[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://Scenes/game_manager.tscn" id="1_5prwk"]
+[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://GameScenes/game_manager.tscn" id="1_5prwk"]
 [ext_resource type="Texture2D" uid="uid://bfit5bjaq73qb" path="res://icon.svg" id="2_wjp2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6belq"]

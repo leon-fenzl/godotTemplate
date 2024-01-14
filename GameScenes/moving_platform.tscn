@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5hqvswdi6c60"]
 
-[ext_resource type="Script" path="res://Scenes/World Scripts/MovingPlatform.gd" id="1_bhew7"]
+[ext_resource type="Script" path="res://GameScenes/World Scripts/MovingPlatform.gd" id="1_bhew7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_frdye"]
 size = Vector3(10, 1, 10)

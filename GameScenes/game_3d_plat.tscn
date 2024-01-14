@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dxvxyy7k7kf7q"]
 
-[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://Scenes/game_manager.tscn" id="1_d15j2"]
+[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://GameScenes/game_manager.tscn" id="1_d15j2"]
 [ext_resource type="PackedScene" uid="uid://bpx3donlkdl43" path="res://3D Platformer/TPS_Character.tscn" id="1_u5rp7"]
-[ext_resource type="PackedScene" uid="uid://5hqvswdi6c60" path="res://Scenes/moving_platform.tscn" id="3_ry14o"]
+[ext_resource type="PackedScene" uid="uid://5hqvswdi6c60" path="res://GameScenes/moving_platform.tscn" id="3_ry14o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_frdye"]
 size = Vector3(10, 1, 10)
