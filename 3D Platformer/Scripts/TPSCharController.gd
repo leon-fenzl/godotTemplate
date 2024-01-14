@@ -28,7 +28,7 @@ func LookAtDirection():
 		rotation.y = camera.rotation.y
 	else: 
 		if direction.length()!=0.0:
-			look_at(position+direction,Vector3.UP) 
+			$MeshHolder.look_at(position+direction,Vector3.UP) 
 func Walk(DELTA:float):
 	walkInputs = Input.get_vector("left","right","forward","back")
 	direction = Vector3(walkInputs.x,0,walkInputs.y).normalized()

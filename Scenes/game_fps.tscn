@@ -1,7 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2l2x0q8uhtp3"]
+[gd_scene load_steps=6 format=3 uid="uid://b2l2x0q8uhtp3"]
 
 [ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://Scenes/game_manager.tscn" id="1_vfld4"]
+[ext_resource type="PackedScene" uid="uid://cnhk1h2b6os1r" path="res://FPS/FPS_character.tscn" id="2_ao574"]
+[ext_resource type="PackedScene" uid="uid://5hqvswdi6c60" path="res://Scenes/moving_platform.tscn" id="3_qoduo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xq5qy"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yddac"]
+size = Vector3(10, 1, 10)
 
 [node name="Game_FPS" type="Node"]
 
 [node name="GameManager" parent="." instance=ExtResource("1_vfld4")]
+
+[node name="FPS_Character" parent="." instance=ExtResource("2_ao574")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+speed = 500.0
+jumpForce = 1200.0
+mouseSpeed = 0.1
+
+[node name="Floor" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_xq5qy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_yddac")
+
+[node name="MovingPlatform" parent="." instance=ExtResource("3_qoduo")]
