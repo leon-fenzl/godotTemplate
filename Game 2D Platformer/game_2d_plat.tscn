@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://bns40crfgy1v1"]
 
-[ext_resource type="PackedScene" uid="uid://dogxasadug2b2" path="res://2D Platformer/2d_player.tscn" id="1_3jlgt"]
-[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://GameScenes/game_manager.tscn" id="1_5prwk"]
-[ext_resource type="Texture2D" uid="uid://bfit5bjaq73qb" path="res://icon.svg" id="2_wjp2k"]
+[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://General Assets/game_manager.tscn" id="1_1k041"]
+[ext_resource type="PackedScene" uid="uid://dogxasadug2b2" path="res://Game 2D Platformer/chars/2d_plat_player.tscn" id="2_h0fk7"]
+[ext_resource type="Texture2D" uid="uid://bfit5bjaq73qb" path="res://icon.svg" id="3_odoc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6belq"]
 size = Vector2(128, 128)
 
 [node name="Game_2D_Plat" type="Node"]
 
-[node name="GameManager" parent="." instance=ExtResource("1_5prwk")]
+[node name="GameManager" parent="." instance=ExtResource("1_1k041")]
 
-[node name="2DPlayer_Platformer" parent="." instance=ExtResource("1_3jlgt")]
+[node name="2DPlayer_Platformer" parent="." instance=ExtResource("2_h0fk7")]
 position = Vector2(633, 102)
 speed = 5000.0
 jumpForce = 1500.0
@@ -21,7 +21,7 @@ position = Vector2(606, 583)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
-texture = ExtResource("2_wjp2k")
+texture = ExtResource("3_odoc0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("RectangleShape2D_6belq")

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Templates"
-run/main_scene="res://3D Platformer/TPS_Character.tscn"
+run/main_scene="res://Game 3D Platformer/chars/tps_player.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

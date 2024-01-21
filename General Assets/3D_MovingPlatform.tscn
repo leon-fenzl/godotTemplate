@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5hqvswdi6c60"]
 
-[ext_resource type="Script" path="res://GameScenes/World Scripts/MovingPlatform.gd" id="1_bhew7"]
+[ext_resource type="Script" path="res://General Assets/Scripts/3DMovingPlatform.gd" id="1_nje0n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_frdye"]
 size = Vector3(10, 1, 10)
@@ -8,8 +8,8 @@ size = Vector3(10, 1, 10)
 [sub_resource type="BoxMesh" id="BoxMesh_s212s"]
 size = Vector3(10, 1, 10)
 
-[node name="MovingPlatform" type="StaticBody3D"]
-script = ExtResource("1_bhew7")
+[node name="3D_MovingPlatform" type="StaticBody3D"]
+script = ExtResource("1_nje0n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_frdye")

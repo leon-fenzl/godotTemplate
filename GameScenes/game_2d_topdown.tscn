@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://fo4oh12j3cvu"]
-
-[ext_resource type="PackedScene" uid="uid://dboexbvi8f127" path="res://2D Topdown/2d_td_player.tscn" id="1_n20f2"]
-
-[node name="Game_2D_Topdown" type="Node"]
-
-[node name="2D_TD_Player" parent="." instance=ExtResource("1_n20f2")]
-position = Vector2(632, 229)

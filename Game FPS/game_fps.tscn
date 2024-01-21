@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b2l2x0q8uhtp3"]
 
-[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://GameScenes/game_manager.tscn" id="1_vfld4"]
-[ext_resource type="PackedScene" uid="uid://cnhk1h2b6os1r" path="res://FPS/FPS_character.tscn" id="2_ao574"]
-[ext_resource type="PackedScene" uid="uid://5hqvswdi6c60" path="res://GameScenes/moving_platform.tscn" id="3_qoduo"]
+[ext_resource type="PackedScene" uid="uid://djxvfnpn2688g" path="res://General Assets/game_manager.tscn" id="1_vfld4"]
+[ext_resource type="PackedScene" uid="uid://cnhk1h2b6os1r" path="res://Game FPS/chars/fps_player.tscn" id="2_ao574"]
+[ext_resource type="PackedScene" uid="uid://5hqvswdi6c60" path="res://General Assets/3D_MovingPlatform.tscn" id="3_qoduo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xq5qy"]
 size = Vector3(10, 1, 10)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcta3rnmlwdo"
-path="res://.godot/imported/Floor_Tilemap.png-717334f306fdf23231e4f60a9dd3d234.ctex"
+uid="uid://fx0pwtmew5ib"
+path="res://.godot/imported/SideScroller_Tilemap.png-b9a27ea73b72eaba9875b6fb2a2bf2ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Floor_Tilemap.png"
-dest_files=["res://.godot/imported/Floor_Tilemap.png-717334f306fdf23231e4f60a9dd3d234.ctex"]
+source_file="res://General Assets/Art/SideScroller_Tilemap.png"
+dest_files=["res://.godot/imported/SideScroller_Tilemap.png-b9a27ea73b72eaba9875b6fb2a2bf2ac.ctex"]
 
 [params]
 

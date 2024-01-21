@@ -1,35 +1,33 @@
-[gd_scene load_steps=13 format=3 uid="uid://dboexbvi8f127"]
+[gd_scene load_steps=11 format=3 uid="uid://0phyn1ps6df7"]
 
-[ext_resource type="Script" path="res://2D Topdown/Scripts/2DPlayerTD.gd" id="1_p4tqp"]
-[ext_resource type="Script" path="res://2D Platformer/Scripts/CameraFollow.gd" id="2_evprn"]
-[ext_resource type="Texture2D" uid="uid://bnyqvvw60uhyh" path="res://Art/Topdown_Tilemap.png" id="3_7vd8b"]
+[ext_resource type="Texture2D" uid="uid://bnyqvvw60uhyh" path="res://General Assets/Art/Topdown_Tilemap.png" id="3_2xhbn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o0csl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b4c1c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ig847"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2o4u"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4e5dp"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4a5am"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gyg7a"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88v1c"]
-atlas = ExtResource("3_7vd8b")
+atlas = ExtResource("3_2xhbn")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oke7q"]
@@ -88,17 +86,8 @@ animations = [{
 "speed": 1.0
 }]
 
-[node name="2D_TD_Player" type="CharacterBody2D"]
-script = ExtResource("1_p4tqp")
+[node name="2d_td_ai" type="CharacterBody2D"]
 metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-script = ExtResource("2_evprn")
-lerpSpeed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_o0csl")
@@ -109,7 +98,7 @@ sprite_frames = SubResource("SpriteFrames_oke7q")
 animation = &"up_r"
 
 [node name="SprPlayer" type="Sprite2D" parent="."]
-texture = ExtResource("3_7vd8b")
+texture = ExtResource("3_2xhbn")
 hframes = 3
 vframes = 3
 frame = 4

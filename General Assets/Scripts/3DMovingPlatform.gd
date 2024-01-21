@@ -1,13 +1,13 @@
 extends StaticBody3D
-class_name MovingPlatform
+class_name MovingPlatform3D
 
 @export var speed := 25.0
 @export var minDistance := 1.0
 @export var posArray := PackedVector3Array()
-
 @onready var distance:=Vector3.ZERO
 @onready var index:=0
 @onready var player:Node = null
+
 func _ready():
 	print(posArray.size())
 func _physics_process(delta):

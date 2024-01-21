@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bpx3donlkdl43"]
 
-[ext_resource type="Script" path="res://3D Platformer/Scripts/TPSCharController.gd" id="1_4k6kh"]
-[ext_resource type="Script" path="res://3D Platformer/Scripts/TPSCameraController.gd" id="2_7kgh4"]
+[ext_resource type="Script" path="res://Game 3D Platformer/Scripts/TPSCharController.gd" id="1_4k6kh"]
+[ext_resource type="Script" path="res://Game 3D Platformer/Scripts/TPSCameraController.gd" id="2_7kgh4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v1gif"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nqb84"]
 
-[node name="TPS_Character" type="CharacterBody3D"]
+[node name="tps_player" type="CharacterBody3D"]
 script = ExtResource("1_4k6kh")
 speed = 500.0
 jumpForce = 2000.0
